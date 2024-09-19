@@ -23,16 +23,32 @@ app.get("/", (req, res) => {
 //: dois pontos representa entrada de parametro
 //:nome é um parâmetro obrigatório
 //:nome? é um parâmetro opcional
-app.get("/perfil", (req, res) => {
+app.get("/perfil/:nome?", (req, res) => {
   //coletando o parâmetro e guardando na variável
+  const listaNomes = ["Sergio", "José", "Afonso", "Fabiano"];
   const nome = req.params.nome;
-  res.render("perfil");
+  res.render("perfil", {
+    nome: nome,
+    listaNomes: listaNomes,
+  });
 });
 
 //ROTA DE VÍDEOS
 //:playlist? e :video? parametros opcionais
-app.get("/videos", (req, res) => {
-  res.render("videos");
+app.get("/videos/:playlist?/:video?", (req, res) => {
+  const listaPlaylist = {
+    "Receitas": "Coxinha",
+    "Músicas": "The Summoning - Sleep Token",
+    "Gameplays": "Deadlock",
+    "Programação": "HTML5"
+    };
+    const playlist = req.params.playlist;
+    const video = playlist ? listaPlaylist[playlist] : null;
+    res.render("videos", {
+      listaPlaylist: listaPlaylist,
+      playlist: playlist,
+      video: video,
+    });
 });
 
 // Rota de produtos
