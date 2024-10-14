@@ -1,4 +1,3 @@
-//ORM - Sequelize
 import Sequelize from "sequelize";
 // Configuração do Sequelize
 import connection from "../config/sequelize-config.js";
