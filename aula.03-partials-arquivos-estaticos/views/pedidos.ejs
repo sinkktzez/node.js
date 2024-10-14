@@ -1,0 +1,19 @@
+<%- include ('partials/navbar.ejs')%>
+<%- include ('partials/header.ejs')%>
+
+<h1>Pedidos</h1>
+<hr>
+
+<h4>forEach sem tabela:</h4>
+<% pedidos.forEach((pedido)=>{%>
+    Produto: <%= pedido.produto %><br>
+    Valor: <%= pedido.valor %> <br><br>
+<%})%>
+
+<h4>forEach com tabela:</h4>
+<% pedidos.forEach((pedido)=>{%>
+    Produto: <%= pedido.produto %><br>
+    Valor: <%= pedido.valor %> <br><br>
+<%})%>
+
+<%- include ('partials/footer.ejs')%>

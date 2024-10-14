@@ -1,0 +1,18 @@
+<%- include ('partials/navbar.ejs')%>
+<%- include ('partials/header.ejs')%>
+
+<h1>Perfil</h1>
+    
+<% if (nome) { %>
+    <p>Bem-vindo, <%= nome %>!</p>
+<% } else { %>
+    <p>Nenhum nome foi passado.</p>
+    <h2>Lista de Nomes:</h2>
+    <ul>
+        <% listaNomes.forEach((nome) => { %>
+            <li><a href="/perfil/<%= nome %>"><%= nome %></a></li>
+        <% }) %>
+    </ul>
+<% } %>
+
+<%- include ('partials/footer.ejs')%>

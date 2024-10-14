@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos</title>
+</head>
+<body>
+
+    <h1>Vídeos</h1>
+
+    <% if (playlist) { %>
+        <p>Playlist: <%= playlist %></p>
+
+    <% if (video) { %>
+        <p>Vídeo: <%= video %></p>
+
+    <% } else { %>
+        <p>Essa playlist não têm vídeo associado.</p>
+    <% } %>
+    <% } else { %>
+        <p>Nenhuma playlist foi selecionada.</p>
+        <h2>Listas de Playlists:</h2>
+        <ul>
+            <% Object.keys(listaPlaylist).forEach((playlist) => { %>
+                <li><a href="/videos/<%= playlist %>"><%= playlist %></a></li>
+            <% }) %>
+        </ul>
+    <% } %>
+
+</body>
+</html>

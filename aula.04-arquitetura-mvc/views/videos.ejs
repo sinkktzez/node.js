@@ -1,0 +1,25 @@
+<%- include ('partials/navbar.ejs')%>
+<%- include ('partials/header.ejs')%>
+
+<h1>Vídeos</h1>
+
+<% if (playlist) { %>
+    <p>Playlist: <%= playlist %></p>
+
+<% if (video) { %>
+    <p>Vídeo: <%= video %></p>
+
+<% } else { %>
+    <p>Essa playlist não têm vídeo associado.</p>
+<% } %>
+<% } else { %>
+    <p>Nenhuma playlist foi selecionada.</p>
+    <h2>Listas de Playlists:</h2>
+    <ul>
+        <% Object.keys(listaPlaylist).forEach((playlist) => { %>
+            <li><a href="/videos/<%= playlist %>"><%= playlist %></a></li>
+        <% }) %>
+    </ul>
+<% } %>
+
+<%- include ('partials/footer.ejs')%>
