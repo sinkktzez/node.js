@@ -19,8 +19,11 @@ th, td {
 
 footer {
     text-align: center;    
+<<<<<<< HEAD
 }
 
 input[type="text"]{
     width: 230px;
+=======
+>>>>>>> ff7413f4cc559fc882bd556d8ba348b8d4799cb6
 }

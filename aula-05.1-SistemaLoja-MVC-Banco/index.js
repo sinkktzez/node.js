@@ -9,10 +9,13 @@ import ClientesController from "./controllers/ClientesController.js";
 import ProdutosController from "./controllers/ProdutosController.js";
 import PedidosController from "./controllers/PedidosController.js";
 
+<<<<<<< HEAD
 
 // Permite capturar dados vindos de formulários
 app.use(express.urlencoded({extend: false}));
 
+=======
+>>>>>>> ff7413f4cc559fc882bd556d8ba348b8d4799cb6
 // Realizando a conexão com o banco de dados
 connection
   .authenticate().then(() => {
@@ -38,11 +41,16 @@ app.use("/", ClientesController);
 app.use("/", ProdutosController);
 app.use("/", PedidosController);
 
+<<<<<<< HEAD
 // Rota Principal
+=======
+// ROTA PRINCIPAL
+>>>>>>> ff7413f4cc559fc882bd556d8ba348b8d4799cb6
 app.get("/", function (req, res) {
   res.render("index");
 });
 
+<<<<<<< HEAD
 // Inicia o servidor na rota 8080
 const port = 3000;
 app.listen(port, (error) => {
@@ -50,5 +58,13 @@ app.listen(port, (error) => {
     console.log(`Erro ao iniciar o servidor: ${error}.`);
   } else {
     console.log(`Servidor rodando em http://localhost:${port}`);
+=======
+// INICIA O SERVIDOR NA PORTA 8080
+app.listen(8080, function (erro) {
+  if (erro) {
+    console.log("Ocorreu um erro!");
+  } else {
+    console.log("Servidor iniciado com sucesso!");
+>>>>>>> ff7413f4cc559fc882bd556d8ba348b8d4799cb6
   }
 });

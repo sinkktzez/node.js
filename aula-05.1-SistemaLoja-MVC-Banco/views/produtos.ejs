@@ -4,6 +4,7 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
+<<<<<<< HEAD
                 <h1>Cadastrar produto</h1>
             </div>
             <div class="card-body">
@@ -25,6 +26,8 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
+=======
+>>>>>>> ff7413f4cc559fc882bd556d8ba348b8d4799cb6
                 <h1>Produtos</h1>
             </div>
             <div class="card-body">
@@ -40,6 +43,7 @@
                     <tbody>
                         <% produtos.forEach(produto => { %>
                         <tr>
+<<<<<<< HEAD
                             <td>
                                 <img src="imgs/product.png" width="30px">
                             </td>
@@ -53,6 +57,12 @@
                             </td>
                             <td><a style="color: orange;" href="/produtos/edit/<%= produto.id %>">Editar</a></td>
                             <td><a style="color:red;" href="/produtos/delete/<%= produto.id %>" onclick="return confirm('Deseja realmente deletar o pedido <%= produto.nome %>')">Deletar</a></td>
+=======
+                            <td><img src="imgs/product.png" width="30px"></td>
+                            <td><%= produto.nome %></td>
+                            <td><%= produto.preco.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) %></td>
+                            <td><%= produto.categoria %></td>
+>>>>>>> ff7413f4cc559fc882bd556d8ba348b8d4799cb6
                         </tr>
                         <% }) %>
                     </tbody>

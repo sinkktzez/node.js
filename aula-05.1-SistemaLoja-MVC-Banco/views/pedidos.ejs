@@ -4,6 +4,7 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
+<<<<<<< HEAD
                 <h1>Cadastrar pedido</h1>
             </div>
             <div class="card-body">
@@ -23,6 +24,8 @@
     <div class="container">
         <div class="card">
             <div class="card-header">
+=======
+>>>>>>> ff7413f4cc559fc882bd556d8ba348b8d4799cb6
                 <h1>Pedidos</h1>
             </div>
             <div class="card-body">
@@ -36,6 +39,7 @@
                     </thead>
                     <tbody>
                         <% pedidos.forEach(pedido => { %>
+<<<<<<< HEAD
                             <tr>
                                 <td><img src="imgs/order.png" width="30px"></td>
                                 <td>
@@ -47,6 +51,13 @@
                                 <td><a style="color: orange;" href="/pedidos/edit/<%= pedido.id %>">Editar</a></td>
                                 <td><a style="color:red;" href="/pedidos/delete/<%= pedido.id %>" onclick="return confirm('Deseja realmente deletar o pedido <%= pedido.numero %>')">Deletar</a></td>
                             </tr>
+=======
+                        <tr>
+                            <td><img src="imgs/order.png" width="30px"></td>
+                            <td><%= pedido.numero %></td>
+                            <td><%= pedido.valor.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'}) %></td>
+                        </tr>
+>>>>>>> ff7413f4cc559fc882bd556d8ba348b8d4799cb6
                         <% }) %>
                     </tbody>
                 </table>
